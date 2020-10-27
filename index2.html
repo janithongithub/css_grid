@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        .wrapper{
+            display: grid;
+           
+           /* grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: 1fr 2fr 1fr;
+            */
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1em;
+
+            /*  grid-auto-rows: 100px;    sets the fixed height drawback - if text in div is more it will be a mess */
+            grid-auto-rows: minmax(100, auto);
+        }
+
+        .nested{
+            display: grid;
+            grid-template-columns:repeat(3, 1fr);
+            grid-auto-rows: 60px;
+            gap: 1em;
+
+        }
+
+        .nested > div{
+            border: 1px #333 solid;
+            padding: 1em;
+        }
+
+        .wrapper > div{
+            background: rgb(232, 139, 139);
+            padding: 1em;
+        }
+
+        .wrapper > div:nth-child(odd){
+            background: rgb(140, 230, 168);
+        }
+
+
+        </style>
+        <title>CSS Grid</title>
+
+    </head>
+    <body>
+        <div class="wrapper">
+
+            <div>
+                Lorem ipsum dolor sit amet.
+            </div>
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+            <div class="nested">
+                <div>Lorem</div>
+                <div>Lorem</div>
+                <div>Lorem</div>
+                <div>Lorem</div>
+                <div>Lorem</div>
+                <div>Lorem</div> 
+                <div>Lorem</div>
+                <div>Lorem</div>
+                <div>Lorem</div>        
+                
+            </div>
+            <div>
+                Lorem ipsum dolor sit amet.
+            </div>
+            <div>
+                Lorem ipsum dolor sit amet.
+            </div>
+            <div>
+                Lorem ipsum dolor sit amet.
+            </div>
+            <div>
+                Lorem ipsum dolor sit amet.
+            </div>
+        </div>
+        
+    </body>
+</html>
